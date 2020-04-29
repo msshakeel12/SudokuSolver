@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="sudoku.js"></script>
+
+    
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+    <section class="the puzzle">
+        <table>
+                    <caption>The puzzle</caption>
+                    <colgroup><col><col><col>
+                    <colgroup><col><col><col>
+                    <colgroup><col><col><col>
+                        <tbody>
+                    <tr><td><var><div id="jf00" class="boxes"></div></var></td><td><var><div id="jf01" class="boxes"></div></var></td><td><var><div id="jf02" class="boxes"></div></var>
+                    <td><var><div id="jf03" class="boxes"></div></var></td><td><var><div id="jf04" class="boxes"></div></var></td><td><var><div id="jf05" class="boxes"></div></var></td>
+                    <td><var><div id="jf06" class="boxes"></div></var></td><td><var><div id="jf07" class="boxes"></div></var></td><td><var><div id="jf08" class="boxes"></div></var></td></tr>
+                    
+                    <tr><td><var><div id="jf10" class="boxes"></div></var></td><td><var><div id="jf11" class="boxes"></div></var></td><td><var><div id="jf12" class="boxes"></div></var>
+                    <td><var><div id="jf13" class="boxes"></div></var></td><td><var><div id="jf14" class="boxes"></div></var></td><td><var><div id="jf15" class="boxes"></div></var></td>
+                    <td><var><div id="jf16" class="boxes"></div></var></td><td><var><div id="jf17" class="boxes"></div></var></td><td><var><div id="jf18" class="boxes"></div></var></td></tr>
+
+                    <tr><td><var><div id="jf20" class="boxes"></div></var></td><td><var><div id="jf21" class="boxes"></div></var></td><td><var><div id="jf22" class="boxes"></div></var>
+                    <td><var><div id="jf23" class="boxes"></div></var></td><td><var><div id="jf24" class="boxes"></div></var></td><td><var><div id="jf25" class="boxes"></div></var></td>
+                    <td><var><div id="jf26" class="boxes"></div></var></td><td><var><div id="jf27" class="boxes"></div></var></td><td><var><div id="jf28" class="boxes"></div></var></td></tr>         
+                    </tbody>
+                    <tbody>
+                    <tr><td><var><div id="jf30" class="boxes"></div></var></td><td><var><div id="jf31" class="boxes"></div></var></td><td><var><div id="jf32" class="boxes"></div></var>
+                    <td><var><div id="jf33" class="boxes"></div></var></td><td><var><div id="jf34" class="boxes"></div></var></td><td><var><div id="jf35" class="boxes"></div></var></td>
+                    <td><var><div id="jf36" class="boxes"></div></var></td><td><var><div id="jf37" class="boxes"></div></var></td><td><var><div id="jf38" class="boxes"></div></var></td></tr>
+
+                    <tr><td><var><div id="jf40" class="boxes"></div></var></td><td><var><div id="jf41" class="boxes"></div></var></td><td><var><div id="jf42" class="boxes"></div></var>
+                    <td><var><div id="jf43" class="boxes"></div></var></td><td><var><div id="jf44" class="boxes"></div></var></td><td><var><div id="jf45" class="boxes"></div></var></td>
+                    <td><var><div id="jf46" class="boxes"></div></var></td><td><var><div id="jf47" class="boxes"></div></var></td><td><var><div id="jf48" class="boxes"></div></var></td></tr>
+                        
+
+                    <tr><td><var><div id="jf50" class="boxes"></div></var></td><td><var><div id="jf51" class="boxes"></div></var></td><td><var><div id="jf52" class="boxes"></div></var>
+                    <td><var><div id="jf53" class="boxes"></div></var></td><td><var><div id="jf54" class="boxes"></div></var></td><td><var><div id="jf55" class="boxes"></div></var></td>
+                    <td><var><div id="jf56" class="boxes"></div></var></td><td><var><div id="jf57" class="boxes"></div></var></td><td><var><div id="jf58" class="boxes"></div></var></td></tr>
+                </tbody><tbody>
+                    <tr><td><var><div id="jf60" class="boxes"></div></var></td><td><var><div id="jf61" class="boxes"></div></var></td><td><var><div id="jf62" class="boxes"></div></var>
+                    <td><var><div id="jf63" class="boxes"></div></var></td><td><var><div id="jf64" class="boxes"></div></var></td><td><var><div id="jf65" class="boxes"></div></var></td>
+                    <td><var><div id="jf66" class="boxes"></div></var></td><td><var><div id="jf67" class="boxes"></div></var></td><td><var><div id="jf68" class="boxes"></div></var></td></tr>
+
+
+                    <tr><td><var><div id="jf70" class="boxes"></div></var></td><td><var><div id="jf71" class="boxes"></div></var></td><td><var><div id="jf72" class="boxes"></div></var>
+                    <td><var><div id="jf73" class="boxes"></div></var></td><td><var><div id="jf74" class="boxes"></div></var></td><td><var><div id="jf75" class="boxes"></div></var></td>
+                    <td><var><div id="jf76" class="boxes"></div></var></td><td><var><div id="jf77" class="boxes"></div></var></td><td><var><div id="jf78" class="boxes"></div></var></td></tr>
+
+
+                    <tr><td><var><div id="jf80" class="boxes"></div></var></td><td><var><div id="jf81" class="boxes"></div></var></td><td><var><div id="jf82" class="boxes"></div></var>
+                    <td><var><div id="jf83" class="boxes"></div></var></td><td><var><div id="jf84" class="boxes"></div></var></td><td><var><div id="jf85" class="boxes"></div></var></td>
+                    <td><var><div id="jf86" class="boxes"></div></var></td><td><var><div id="jf87" class="boxes"></div></var></td><td><var><div id="jf88" class="boxes"></div></var></td></tr>
+                </tbody>
+                       
+                     </div>
+                    </table>   
+                    </section>
+    <button onclick="sudokusolver()">Solve</button>
+    
+</body>
+</html>
